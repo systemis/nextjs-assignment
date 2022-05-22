@@ -1,0 +1,331 @@
+@font-face {
+  font-family: Comfortaa;
+  /* src: url('Comfortaa-VariableFont_wght.ttf'); */
+}
+* {
+  font-family: Comfortaa;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/*product*/
+
+#product1 {
+  margin: 0px 20px 0px 20px;
+}
+
+#product1 .pro-container {
+  display: flex;  
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 30px 80px;
+}
+
+#product1 h1 {
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#product1 .pro {
+  width: 18%;
+  min-width: 200px;
+  height: 385px;
+  padding: 10px 10px;
+  border: 1px solid #E2DCDE;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  margin: 20px 3px;
+  transition: 0.2s ease;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+
+}
+
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 13px;
+}
+
+#product1 .pro .des .name-product {
+  color: #1a1a1a;
+  font-size: 16px;
+  padding-top: 7px;
+  padding-bottom: 3px;
+}
+
+#product1 .pro .des .star i{
+  color: rgb(243,181,25);
+  font-size: 12px;
+
+}
+
+#product1 .pro .des h3 {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #D17D61;
+}
+
+#product1 .pro .des .add-to-kart h4 {
+  font-size: 15px;
+  text-align: center;
+}
+
+#product1 .pro .des .add-to-kart{
+  margin-top: 5px;
+  padding-top: 5px;
+  width: auto;
+  height: 20px;
+  border: 1px solid #E2DCDE;
+  border-radius: 20px;
+}
+
+#view a {
+  float: right;
+  margin-right: 160px;
+  padding-bottom: 30px;
+  margin-top: -20px;
+  color: #D17D61;
+  cursor: pointer;
+}
+
+/*slide show*/
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.banner-item-01 {
+padding: 120px 0px;
+background-image: url('/banner1.jfif');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.banner-item-02 {
+padding: 120px 0px;
+background-image: url('/banner2.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.banner-item-01 .text-content h2 {
+  color: #fff;
+}
+
+
+/* SLIDER */
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+  visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width:       60px;
+  height:      60px;
+  line-height: 60px; /* If you want to place numbers */
+  text-align: center;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+.CSSgal .prevNext a+a {
+  left: auto;
+  right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.CSSgal .bullets > a {
+  display: inline-block;
+  width:       30px;
+  height:      30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+  color: #fff;  
+  text-align: center;
+}
+.CSSgal .slider h2 {
+  margin-top: 40vh;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+}
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+}
+
+/*footer*/
+
+footer .copyright {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+@media (max-width: 800px) {
+  #navbar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #f5f5f5;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 60px 0 0 10px;
+      transition: 0.3s;
+  }
+
+  #navbar.active {
+      right: 0px;
+  }
+
+  #navbar li {
+      margin-top: 25px;
+  }
+
+  #mobile {
+      display: flex;
+      align-items: center;
+  }
+
+  #mobile i {
+      color: #BB743A;
+      font-size: 20px;
+      padding-left: 20px;
+  }
+
+  #close {
+      display: initial;
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      color: #222;
+      font-size: 19px;
+  }
+
+  #bag {
+      display: none;
+  }
+}
+
+
